@@ -1,6 +1,6 @@
 # SOS Química
 ## Objetivo
-
+cria um site que deve mostrar o que deve ser feito quando acontece algum acidente de laboratório. sendo rapido e eficiente facil de usar tendo suporte para auxiliar em pesquisas tambem
 
 ### Stack Tecnlógico
 - Backend: PHP estruturado com sessões nativas
@@ -10,7 +10,7 @@
 #### Regras de negócio (CORE)
 - Tratar senhas de usuários com hash bcrypt
 - O sistema deve ter uma página de históricos e manter sempre os logs de qualquer alteração feita por qualquer usuário, para auditorias futuras.
-
+  no site nao sera necessario o login , o usuario tera que selecionar ou digitar o problema 
 
 ##### Regras Globais
 - Use sempre PDO para conexão e queries no MySQL para evitar SQL Injections
