@@ -1,0 +1,79 @@
+/* =========================================================
+   SOS QUÍMICA - ESTILOS COMPLEMENTARES
+   Mobile-First & Paleta Verde Musgo
+   ========================================================= */
+
+/* Suavização de renderização */
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background-color: #355535;
+    color: #ffffff;
+}
+
+/* Efeito de pulso para situações de emergência Verde Musgo */
+@keyframes sos-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(53, 85, 53, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(53, 85, 53, 0);
+    }
+}
+
+.sos-pulse-ring {
+    animation: sos-glow 2s infinite;
+}
+
+/* Estilo para cartões de procedimentos */
+.procedimento-card {
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.procedimento-card:hover {
+    transform: translateY(-3px);
+    border-color: #578457;
+}
+
+/* Scrollbar estilizada em tom Verde Musgo Suave */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(37, 57, 37, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(66, 107, 66, 0.35);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(53, 85, 53, 0.65);
+}
+
+/* Otimização para Impressão da Ficha de Emergência */
+@media print {
+    header, footer, #toast-container, #sos-modal-overlay, .nao-imprimir {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 12pt;
+    }
+
+    .imprimir-ficha {
+        box-shadow: none !important;
+        border: 2px solid #000 !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        page-break-inside: avoid;
+    }
+}
